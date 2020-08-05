@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "NGHIEPNV_PH09589_ASSIGNMENT"
