@@ -27,6 +27,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 public class Maps_Activity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -98,5 +99,41 @@ public class Maps_Activity extends FragmentActivity implements OnMapReadyCallbac
             return;
         }
         mMap.setMyLocationEnabled(true);
+    }
+    public void getGPS(View view) {
+        LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_FINE_LOCATION) !=
+                PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(Maps_Activity.this,new String[]{
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION
+            },999);
+            return;
+        }
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0,
+                new LocationListener() {
+                    @Override
+                    public void onLocationChanged(Location location) {
+                        Toast.makeText(Maps_Activity.this, location.getLatitude()+" : " + location.getLongitude(),Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onStatusChanged(String provider, int status, Bundle extras) {
+
+                    }
+
+                    @Override
+                    public void onProviderEnabled(String provider) {
+
+                    }
+
+                    @Override
+                    public void onProviderDisabled(String provider) {
+
+                    }
+                });
     }
 }

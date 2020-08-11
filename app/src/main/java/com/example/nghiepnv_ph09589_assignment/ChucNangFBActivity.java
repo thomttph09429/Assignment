@@ -44,10 +44,10 @@ public class ChucNangFBActivity extends AppCompatActivity {
 
         edtlink = findViewById(R.id.edtlink_chucnangfb);
         btnsharelink = findViewById(R.id.btnsharelink_chucnangfb);
-//        btnshareimg = findViewById(R.id.btnshareimg_chucnangfb);
+        btnshareimg = findViewById(R.id.btnshareimg_chucnangfb);
         btnsharevideo = findViewById(R.id.btnsharevideo_chucnangfb);
         btnchonvideo = findViewById(R.id.btnchonvideo_chucnangfb);
-//        imganh = findViewById(R.id.chonimg_chucnangfb);
+        imganh = findViewById(R.id.chonimg_chucnangfb);
         videoView = findViewById(R.id.video_chucnangfb);
 
         shareDialog = new ShareDialog(ChucNangFBActivity.this);
@@ -57,8 +57,8 @@ public class ChucNangFBActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (shareDialog.canShow(ShareLinkContent.class)){
                     shareLinkContent = new ShareLinkContent.Builder()
-                            .setContentTitle(edttitle.getText().toString())
-                            .setContentDescription(edtmota.getText().toString())
+//                            .setContentTitle(edttitle.getText().toString())
+//                            .setContentDescription(edtmota.getText().toString())
                             .setContentUrl(Uri.parse(edtlink.getText().toString()))
                             .build();
                 }
