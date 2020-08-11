@@ -5,35 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="10dp"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:weightSum="4"
     tools:context=".MainActivity">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Course"
+    <ImageView
         android:id="@+id/Course"
-        android:onClick="Course"/>
-
-    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Maps"
+        android:layout_height="225dp"
+        android:layout_weight="1"
+        android:onClick="Course"
+        android:src="@drawable/course" />
+
+    <ImageView
         android:id="@+id/Maps"
-        android:onClick="Maps"/>
-
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="News"
+        android:onClick="Maps"
+        android:src="@drawable/maps"
+        android:layout_weight="1"/>
+
+    <ImageView
         android:id="@+id/News"
-        android:onClick="News"/>
-
-    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Social"
+        android:layout_height="227dp"
+        android:layout_weight="1"
+        android:onClick="News"
+        android:src="@drawable/news" />
+
+    <ImageView
         android:id="@+id/Social"
-        android:onClick="Social"/>
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:layout_weight="1"
+        android:onClick="Social"
+        android:src="@drawable/social" />
 
 </LinearLayout>

@@ -1,8 +1,22 @@
 package com.example.nghiepnv_ph09589_assignment;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Criteria;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -11,17 +25,50 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.io.IOException;
+import java.util.List;
+
 public class Maps_Activity extends FragmentActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+    SearchView searchView;
+    LocationManager locationManager;
+    String provider;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps_);
+        searchView = findViewById(R.id.seach);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                String location=searchView.getQuery().toString();
+                List<Address> addressList = null;
+                if (location!=null||!location.equals("")){
+                    Geocoder geocoder = new Geocoder(Maps_Activity.this);
+                    try {
+                        addressList=geocoder.getFromLocationName(location, 1);
+                    } catch (IOException e){
+                        e.printStackTrace();
+                    }
+                        Address address = addressList.get(0);
+                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
+                    mMap.addMarker(new MarkerOptions().position(latLng).title(location));
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng,10));
+                }
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
         mapFragment.getMapAsync(this);
     }
 
@@ -39,11 +86,17 @@ public class Maps_Activity extends FragmentActivity implements OnMapReadyCallbac
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng fptpoly = new LatLng(21.038308, 105.747055);
+        mMap.addMarker(new MarkerOptions().position(fptpoly).title("Trường Cao đẳng FPT Polyteachnic Hà Nội"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(fptpoly));
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
-        LatLng hanoi = new LatLng(21.0381278,105.746846);
-        mMap.addMarker(new MarkerOptions().position(hanoi).title("Cao đẳng Thực hành FPT Polytechnic"));
+            ActivityCompat.requestPermissions(Maps_Activity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION},1);
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+
+            return;
+        }
+        mMap.setMyLocationEnabled(true);
     }
 }
