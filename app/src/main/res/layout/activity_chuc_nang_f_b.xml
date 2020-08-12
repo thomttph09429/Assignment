@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp"
-    tools:context=".ChucNangFBActivity">
+    android:padding="12dp"
+    tools:context="com.example.thomttph09429.ChucNangFBActivity">
 
     <EditText
         android:hint="link"
@@ -18,6 +18,8 @@
         android:layout_gravity="center_horizontal"
         android:id="@+id/btnsharelink_chucnangfb"
         android:text="share link"
+        android:background="@drawable/my1"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
@@ -30,6 +32,8 @@
         android:layout_height="150dp"/>
 
     <Button
+        android:background="@drawable/my1"
+
         android:layout_gravity="center_horizontal"
         android:id="@+id/btnshareimg_chucnangfb"
         android:text="share image"
@@ -52,10 +56,14 @@
             android:id="@+id/btnchonvideo_chucnangfb"
             android:text="chọn video"
             android:layout_weight="1"
+            android:background="@drawable/my1"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <Button
+            android:background="@drawable/my1"
+
             android:id="@+id/btnsharevideo_chucnangfb"
             android:text="share video"
             android:layout_weight="1"

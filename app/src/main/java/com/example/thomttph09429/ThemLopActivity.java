@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,8 +7,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.nghiepnv_ph09589_assignment.DAO.LopDAO;
-import com.example.nghiepnv_ph09589_assignment.Model.Lop;
+import com.example.thomttph09429.DAO.LopDAO;
+import com.example.thomttph09429.Model.Lop;
+import com.example.thomttph09429.R;
 
 public class ThemLopActivity extends AppCompatActivity {
     EditText MaLop, TenLop;

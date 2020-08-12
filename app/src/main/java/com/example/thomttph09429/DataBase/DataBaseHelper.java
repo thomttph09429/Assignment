@@ -1,13 +1,11 @@
-package com.example.nghiepnv_ph09589_assignment.DataBase;
+package com.example.thomttph09429.DataBase;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
-import com.example.nghiepnv_ph09589_assignment.DAO.LopDAO;
-import com.example.nghiepnv_ph09589_assignment.DAO.SinhVienDAO;
+import com.example.thomttph09429.DAO.LopDAO;
+import com.example.thomttph09429.DAO.SinhVienDAO;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String Database_Name = "qlsv";

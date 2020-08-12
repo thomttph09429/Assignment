@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.example.nghiepnv_ph09589_assignment.R;
+import com.example.thomttph09429.R;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -41,9 +41,10 @@ public class NewsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+        setTitle("tin tức");
         myItems = new ArrayList<>();
         listView = findViewById(R.id.lv);
-        editText = findViewById(R.id.edDc);
+//        editText = findViewById(R.id.edDc);
         intent = new Intent(this, DetailNewsActivity.class);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -57,7 +58,7 @@ public class NewsActivity extends AppCompatActivity {
     }
 
     public void getData(View view) {
-        final String a = editText.getText().toString().trim();
+        final String a = "https://vnexpress.net/rss/giao-duc.rss";
 
         AsyncTask asyncTask = new AsyncTask() {
             public String link = a;

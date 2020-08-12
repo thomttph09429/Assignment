@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SocialActivity">
+    tools:context="com.example.thomttph09429.SocialActivity">
 <!--    <com.facebook.login.widget.LoginButton-->
 <!--        android:id="@+id/login_button"-->
 <!--        android:layout_width="match_parent"-->
@@ -51,13 +51,18 @@
         android:layout_marginTop="16dp"
         android:layout_gravity="center_horizontal"
         android:text="Đăng xuất"
+        android:background="@drawable/my1"
+
         android:id="@+id/btndangxuatsocial"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
     <Button
+        android:background="@drawable/my1"
+
         android:layout_marginTop="8dp"
         android:layout_gravity="center_horizontal"
+        android:padding="10dp"
         android:id="@+id/btnchucnangfbsocial"
         android:text="Các chức năng Facebook"
         android:layout_width="wrap_content"

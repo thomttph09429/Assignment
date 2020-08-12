@@ -22,5 +22,5 @@
     android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Maps_Activity" />
+    tools:context="com.example.thomttph09429.Maps_Activity" />
 </LinearLayout>

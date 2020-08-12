@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.nghiepnv_ph09589_assignment.R;
+import com.example.thomttph09429.R;
 
 public class CourseActivity extends AppCompatActivity {
 
@@ -14,6 +14,7 @@ public class CourseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course);
+        setTitle("khóa học");
     }
 
     public void ListLop(View view) {

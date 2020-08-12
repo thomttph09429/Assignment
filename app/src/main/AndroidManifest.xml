@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nghiepnv_ph09589_assignment">
+    package="com.example.thomttph09429">
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -19,7 +19,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChucNangFBActivity"></activity>
+        <activity android:name="com.example.thomttph09429.ChucNangFBActivity"></activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -52,18 +52,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Maps_Activity"
+            android:name="com.example.thomttph09429.Maps_Activity"
             android:label="@string/title_activity_maps_" />
-        <activity android:name=".ListSinhVienActivity" />
-        <activity android:name=".DetailNewsActivity" />
-        <activity android:name=".ThemLopActivity" />
-        <activity android:name=".SinhVienActivity" />
-        <activity android:name=".ListLopActivity" />
-        <activity android:name=".SocialActivity" />
-        <activity android:name=".NewsActivity" />
-        <activity android:name=".MapsActivity" />
-        <activity android:name=".CourseActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.thomttph09429.ListSinhVienActivity" />
+        <activity android:name="com.example.thomttph09429.DetailNewsActivity" />
+        <activity android:name="com.example.thomttph09429.ThemLopActivity" />
+        <activity android:name="com.example.thomttph09429.SinhVienActivity" />
+        <activity android:name="com.example.thomttph09429.ListLopActivity" />
+        <activity android:name="com.example.thomttph09429.SocialActivity" />
+        <activity android:name="com.example.thomttph09429.NewsActivity" />
+        <activity android:name="com.example.thomttph09429.MapsActivity" />
+        <activity android:name="com.example.thomttph09429.CourseActivity" />
+        <activity android:name="com.example.thomttph09429.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

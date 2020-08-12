@@ -5,18 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CourseActivity">
+    android:padding="20dp"
+    tools:context="com.example.thomttph09429.CourseActivity">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Danh sách lớp"
-        android:onClick="ListLop"/>
+        android:background="@drawable/my1"
+        android:onClick="ListLop"
+        android:text="Danh sách lớp" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quản lý sinh viên"
-        android:onClick="ListSinhVien"/>
+        android:layout_marginTop="5dp"
+        android:background="@drawable/my1"
+        android:onClick="ListSinhVien"
+
+        android:text="Quản lý sinh viên" />
 
 </LinearLayout>

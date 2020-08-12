@@ -1,13 +1,12 @@
-package com.example.nghiepnv_ph09589_assignment.DAO;
+package com.example.thomttph09429.DAO;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import com.example.nghiepnv_ph09589_assignment.DataBase.DataBaseHelper;
-import com.example.nghiepnv_ph09589_assignment.Model.Lop;
-import com.example.nghiepnv_ph09589_assignment.Model.SinhVien;
+import com.example.thomttph09429.DataBase.DataBaseHelper;
+import com.example.thomttph09429.Model.SinhVien;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -12,12 +12,15 @@
         android:orientation="vertical">
 
         <TextView
+
+            android:textStyle="bold"
+            android:textColor="#2196F3"
             android:id="@+id/tieude"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Tiêu đề"
-            android:textSize="16sp" />
+            android:textSize="25sp" />
 
         <TextView
             android:id="@+id/noidung"
@@ -28,12 +31,13 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/ngày"
+            android:id="@+id/ngay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
             android:text="Ngày"
+            android:textColor="#C6271B"
             android:textSize="16sp" />
     </LinearLayout>
 

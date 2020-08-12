@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment.Model;
+package com.example.thomttph09429.Model;
 
 public class SinhVien {
     private String MaLop;

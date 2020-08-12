@@ -1,15 +1,14 @@
-package com.example.nghiepnv_ph09589_assignment.Adapter;
+package com.example.thomttph09429.Adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.nghiepnv_ph09589_assignment.Model.Lop;
-import com.example.nghiepnv_ph09589_assignment.R;
+import com.example.thomttph09429.Model.Lop;
+import com.example.thomttph09429.R;
 
 import java.util.List;
 

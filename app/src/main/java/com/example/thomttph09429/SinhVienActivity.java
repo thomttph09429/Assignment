@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,10 +10,11 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.example.nghiepnv_ph09589_assignment.DAO.LopDAO;
-import com.example.nghiepnv_ph09589_assignment.DAO.SinhVienDAO;
-import com.example.nghiepnv_ph09589_assignment.Model.Lop;
-import com.example.nghiepnv_ph09589_assignment.Model.SinhVien;
+import com.example.thomttph09429.DAO.LopDAO;
+import com.example.thomttph09429.DAO.SinhVienDAO;
+import com.example.thomttph09429.Model.Lop;
+import com.example.thomttph09429.Model.SinhVien;
+import com.example.thomttph09429.R;
 
 import java.util.ArrayList;
 import java.util.List;

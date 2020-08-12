@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +14,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.VideoView;
 
-import com.example.nghiepnv_ph09589_assignment.R;
+import com.example.thomttph09429.R;
 import com.facebook.share.model.ShareLinkContent;
 import com.facebook.share.model.SharePhoto;
 import com.facebook.share.model.SharePhotoContent;
@@ -41,6 +41,7 @@ public class ChucNangFBActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chuc_nang_f_b);
+        setTitle("chức năng facebook");
 
         edtlink = findViewById(R.id.edtlink_chucnangfb);
         btnsharelink = findViewById(R.id.btnsharelink_chucnangfb);

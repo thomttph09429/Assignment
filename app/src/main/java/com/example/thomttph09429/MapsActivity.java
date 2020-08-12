@@ -1,10 +1,10 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.nghiepnv_ph09589_assignment.R;
+import com.example.thomttph09429.R;
 
 public class MapsActivity extends AppCompatActivity {
 

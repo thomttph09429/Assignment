@@ -1,26 +1,21 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
 import android.os.Bundle;
-import android.util.Base64;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
+import com.example.thomttph09429.R;
 import com.facebook.AccessToken;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
 import com.facebook.Profile;
 import com.facebook.login.LoginManager;
 
-import com.example.nghiepnv_ph09589_assignment.R;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -33,8 +28,6 @@ import com.facebook.login.widget.ProfilePictureView;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 
 public class SocialActivity extends AppCompatActivity {
@@ -96,17 +89,18 @@ public class SocialActivity extends AppCompatActivity {
 //                String hashKey = new String(Base64.encode(md.digest(), 0));
 //                Log.i("TAG", "printHashKey() Hash Key: " + hashKey);
 //            }
-//        } catch (NoSuchAlgorithmException e) {
-//            Log.e("TAG", "printHashKey()", e);
-//        } catch (Exception e) {
-//            Log.e("TAG", "printHashKey()", e);
-//        }
+////        } catch (NoSuchAlgorithmException e) {
+////            Log.e("TAG", "printHashKey()", e);
+////        } catch (Exception e) {
+////            Log.e("TAG", "printHashKey()", e);
+////        }
 //    }
 //    @Override
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        callbackManager.onActivityResult(requestCode, resultCode, data);
 //        super.onActivityResult(requestCode, resultCode, data);
 //    }
+
 ProfilePictureView profilePictureView;
     LoginButton loginButton;
     Button btndangxuat,btnchucnang;
@@ -117,6 +111,7 @@ ProfilePictureView profilePictureView;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
+        setTitle("xã hội");
         AppEventsLogger.activateApp(this);
         callbackManager = CallbackManager.Factory.create();
         setContentView(R.layout.activity_social);
@@ -222,7 +217,6 @@ ProfilePictureView profilePictureView;
         super.onActivityResult(requestCode, resultCode, data);
     }
 
-    @Override
     protected void onStart() {
         LoginManager.getInstance().logOut();
         super.onStart();

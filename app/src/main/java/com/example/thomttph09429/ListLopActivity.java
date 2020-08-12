@@ -1,4 +1,4 @@
-package com.example.nghiepnv_ph09589_assignment;
+package com.example.thomttph09429;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -12,17 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.nghiepnv_ph09589_assignment.Adapter.LopAdapter;
-import com.example.nghiepnv_ph09589_assignment.DAO.LopDAO;
-import com.example.nghiepnv_ph09589_assignment.Model.Lop;
-
-import org.w3c.dom.Text;
+import com.example.thomttph09429.Adapter.LopAdapter;
+import com.example.thomttph09429.DAO.LopDAO;
+import com.example.thomttph09429.Model.Lop;
+import com.example.thomttph09429.R;
 
 import java.util.List;
 
